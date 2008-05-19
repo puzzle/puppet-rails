@@ -1,9 +1,10 @@
 #######################################
 # rails module
+# original by luke kanies
+# http://github.com/lak
 # Puzzle ITC - haerry+puppet(at)puzzle.ch
-# GPLv3
 #######################################
-
-
-# modules_dir { "rails": }
-class rails {}
+class rails {
+	include rubygems
+	package { rails: provider => gem }
+}
